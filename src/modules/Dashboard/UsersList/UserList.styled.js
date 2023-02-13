@@ -15,13 +15,13 @@ export const StyledUser = styled.div`
   display: flex;
   justify-content: space-between;
   background-color: "#f6f7f8";
-  padding: 10px;
+  padding: 50px 10px;
+  border-bottom: 1px solid #ebebeb;
 `;
 
 export const StyledUserList = styled.div`
   display: grid;
   grid-template-column: 1fr 1fr;
-  gap: 50px;
 `;
 
 export const StyledUserDetail = styled.div`

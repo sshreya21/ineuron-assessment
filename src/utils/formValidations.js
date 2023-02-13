@@ -32,7 +32,7 @@ export const getFieldError = ({ error, errors, name }) => {
   return { error: newError, color };
 };
 
-export const validateField = (fieldName) => (value) => {
+export const validateRequiredField = (fieldName) => (value) => {
   if (!value) {
     return `${fieldName} is required`;
   }

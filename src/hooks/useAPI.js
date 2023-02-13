@@ -4,7 +4,7 @@ import apiService from "../utils/apiService";
 import { schema } from "../redux/schema";
 import { getValue } from "../utils/commonUtils";
 
-const useAPI = (type, options) => {
+const useAPI = (type, options = {}) => {
   let apiSchema = schema[type];
   if (typeof apiSchema === "function") {
     apiSchema = apiSchema({});

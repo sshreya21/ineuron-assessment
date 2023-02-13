@@ -1,7 +1,7 @@
 import React from "react";
 import { Form } from "../../../components";
 import {
-  validateField,
+  validateRequiredField,
   isMobileNumber,
   isOnlyNumbers,
 } from "../../../utils/formValidations";
@@ -35,7 +35,7 @@ const RenderAddUserForm = ({
               size="medium"
               rules={{
                 validate: {
-                  required: validateField("First Name"),
+                  required: validateRequiredField("First Name"),
                 },
               }}
             />
@@ -51,7 +51,7 @@ const RenderAddUserForm = ({
               size="medium"
               rules={{
                 validate: {
-                  required: validateField("Last Name"),
+                  required: validateRequiredField("Last Name"),
                 },
               }}
             />
@@ -73,7 +73,7 @@ const RenderAddUserForm = ({
                 validate: {
                   isMobileNumber,
                   isOnlyNumbers,
-                  required: validateField("Phone Number"),
+                  required: validateRequiredField("Phone Number"),
                 },
               }}
             />
@@ -88,7 +88,7 @@ const RenderAddUserForm = ({
               placeholder="Enter Age"
               size="medium"
               rules={{
-                validate: { isOnlyNumbers, required: validateField("Age") },
+                validate: { isOnlyNumbers, required: validateRequiredField("Age") },
               }}
             />
           </StyledInputWrapper>
