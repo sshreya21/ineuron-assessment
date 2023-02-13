@@ -12,6 +12,7 @@ import {
   StyledButton,
   StyledWrapper,
 } from "./AddUserSection.styled";
+import { Button } from "antd";
 
 const RenderAddUserForm = ({
   onAddUserSubmit,
@@ -88,7 +89,10 @@ const RenderAddUserForm = ({
               placeholder="Enter Age"
               size="medium"
               rules={{
-                validate: { isOnlyNumbers, required: validateRequiredField("Age") },
+                validate: {
+                  isOnlyNumbers,
+                  required: validateRequiredField("Age"),
+                },
               }}
             />
           </StyledInputWrapper>

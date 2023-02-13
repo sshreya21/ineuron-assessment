@@ -28,7 +28,7 @@ const AddUserSectionContainer = () => {
     reset();
   };
 
-  const handleAddUserSubmit = (formData, event) => {
+  const handleAddUserSubmit = (formData) => {
     const payload = formData;
     createUser({
       onSuccess: handleCreateUserSuccess,

@@ -20,6 +20,7 @@ import {
 } from "../AddUserSection/AddUserSection.styled";
 import useAPI from "../../../hooks/useAPI";
 import { useForm } from "react-hook-form";
+import { Button } from "antd";
 
 const formFields = {
   firstName: {
@@ -123,12 +124,12 @@ const UserDetailView = ({ user }) => {
             })}
           </StyledUserDetail>
           <StyledButtons>
-            <button type="button" onClick={() => setEditView(true)}>
+            <Button type="primary" onClick={() => setEditView(true)}>
               Edit
-            </button>
-            <button type="button" onClick={() => onDeleteClick(_id)}>
+            </Button>
+            <Button onClick={() => onDeleteClick(_id)} danger>
               Delete
-            </button>
+            </Button>
           </StyledButtons>
         </>
       );

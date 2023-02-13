@@ -1,11 +1,12 @@
 import React from "react";
+import { Button } from "antd";
 
 const RenderAddButton = ({ onAddClick }) => {
   return (
     <>
-      <button type="button" onClick={() => onAddClick(true)}>
+      <Button type="primary" onClick={() => onAddClick(true)}>
         Add New User
-      </button>
+      </Button>
     </>
   );
 };
