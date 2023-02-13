@@ -8,7 +8,7 @@ const useAPI = (type, options) => {
   let apiSchema = schema[type];
   if (typeof apiSchema === "function") {
     apiSchema = apiSchema({});
-  }  
+  }
 
   const dispatch = useDispatch();
 
@@ -21,9 +21,9 @@ const useAPI = (type, options) => {
     return { ...options, ...dataOptions };
   };
 
-  const readAPISchema = (dataOptions) => {    
+  const readAPISchema = (dataOptions) => {
     const optionConfig = readConfig(dataOptions);
-    let apiSchemaFunction = schema[type];        
+    let apiSchemaFunction = schema[type];
     if (typeof apiSchemaFunction === "function") {
       apiSchemaFunction = apiSchemaFunction(optionConfig);
     }
@@ -71,6 +71,8 @@ const useAPI = (type, options) => {
             data: getValue(response, "response.data.data"),
             readProps: parsedSchema.props,
           });
+
+          optionConfig.onSuccess && optionConfig.onSuccess();
         }
       })
       .catch((error) => {

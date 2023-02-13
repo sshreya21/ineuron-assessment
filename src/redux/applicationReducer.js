@@ -7,7 +7,7 @@ export function applicationReducer(state, action) {
     state = initialState;
   }
   const type = action.type.substring(0, action.type.lastIndexOf("_"));
-  switch (action.type) {    
+  switch (action.type) {
     case type + "_PENDING":
       return Object.assign({}, state, {
         [action.readProps || type.toLowerCase()]: {
